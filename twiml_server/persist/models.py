@@ -23,7 +23,7 @@ class Message(db.Model, SerializableModel):
     From = db.Column(db.String)
     To = db.Column(db.String)
     MediaUrl = db.Column(db.String, nullable=True)
-    DateReceived = db.Column(db.DateTime, default=datetime.utcnow())
+    DateReceived = db.Column(db.DateTime, default=datetime.utcnow)
 
     def __init__(self, MessageSid, AccountSid, ApiVersion,
                  Body, From, To, MediaUrl):

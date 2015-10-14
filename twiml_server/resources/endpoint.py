@@ -11,7 +11,7 @@ class Endpoint(Resource):
         api_version = request.values.get('ApiVersion', None)
         body = request.values.get('Body', None)
         from_ = request.values.get('From', None)
-        to = request.values.get('From', None)
+        to = request.values.get('To', None)
         media_url = request.values.get('MediaUrl0', None)
 
         if account_sid in app.config['TWILIO_ACCOUNT_SIDS_CSV'].split(','):
