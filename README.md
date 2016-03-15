@@ -12,7 +12,7 @@ Rename `app.cfg.default` to `app.cfg` and enter desired information, and run `py
 
 ## Usage
 #### Server
-Run `sudo python run.py` in a screen/tmux session or with nohup.
+Run `sudo python run.py` in a screen/tmux session or with nohup/wsgi/whatever.
 #### Client
 Enter `http://yoursite.tld/twilioendpoint` as the TwiML endpoint for your Twilio number's messages to have the messages sent to the server.
 
