@@ -11,5 +11,4 @@ from resources.endpoint import Endpoint
 from resources.messages import Messages
 
 api.add_resource(Endpoint, '/twilioendpoint')
-api.add_resource(Messages, '/messages/<account_sid>')
-
+api.add_resource(Messages, '/messages/<account_sid>/<phone_number>')
