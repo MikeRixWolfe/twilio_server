@@ -1,5 +1,5 @@
 ## Goals
-This is a simple TwiML server to act as a JSON REST relay for Twilio. It supports single MMS attachments and can also be used as an endpoint for multiple Twilio numbers at once. It implments an extensible Flask-Restful architecture that allows easy modification to suit your needs.
+This is a simple TwiML server to act as a JSON REST relay for Twilio. It supports single MMS attachments and can also be used as an endpoint for multiple Twilio accounts/numbers at once. It implments an extensible Flask-Restful architecture that allows easy modification to suit your needs; for example, publishing to Redis rather than writing to a SQLite database to implement a pub/sub architecture for use with other applications.
 
 ## Installation
 Install python 2.7.x and SQLite, then run the following
@@ -12,11 +12,11 @@ Rename `app.cfg.default` to `app.cfg` and enter desired information, and run `py
 
 ## Usage
 #### Server
-Run `sudo python run.py` in a screen/tmux session or with nohup/wsgi/whatever.
+Run `python run.py` in a screen/tmux session or with nohup/wsgi/whatever.
 #### Client
 Enter `http://yoursite.tld/twilioendpoint` as the TwiML endpoint for your Twilio number's messages to have the messages sent to the server.
 
-Browse/cUrl/whatever `http://yoursite.tld/messages/<account_sid>` to retreive messages for that account.
+Browse/cUrl/whatever `http://yoursite.tld/messages/<account_sid>/<phone_number>` to retreive messages for that Twilio account and number.
 
 ## Requirements
 * Python 2.7.x

@@ -1,7 +1,7 @@
 DEBUG = True
 HOST = '0.0.0.0'
 LOGGING = True
-PORT = 80
+PORT = 8080
 SQLALCHEMY_DATABASE_URI = 'sqlite:///persist/app.db'
 SQLALCHEMY_ECHO = False
 SECRET_KEY = ''
