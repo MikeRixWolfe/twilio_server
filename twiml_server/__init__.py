@@ -9,6 +9,8 @@ db = SQLAlchemy(app)
 
 from resources.endpoint import Endpoint
 from resources.messages import Messages
+from resources.gallery import Gallery
 
 api.add_resource(Endpoint, '/twilioendpoint')
 api.add_resource(Messages, '/messages/<account_sid>/<phone_number>')
+api.add_resource(Gallery, '/gallery/<account_sid>/<phone_number>')
