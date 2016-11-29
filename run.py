@@ -6,7 +6,7 @@ from twiml_server.common.util import make_json_app
 
 if __name__ == '__main__':
     if app.config['LOGGING']:
-        logging.basicConfig(filename='app/persist/app.log', level=logging.INFO)
+        logging.basicConfig(filename='twiml_server/persist/app.log', level=logging.INFO)
 
     make_json_app()
 
