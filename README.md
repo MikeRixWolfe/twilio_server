@@ -29,7 +29,7 @@ Browse/cUrl/whatever `http://yoursite.tld/messages/<account_sid>/<phone_number>`
 This software is licensed under the **GPL v3** license. The terms are as follows:
      
      twilio_server
-     Copyright (C) 2015  Mike Rix Wolfe
+     Copyright (C) 2017  Mike Rix Wolfe
      
      This program is free software: you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
