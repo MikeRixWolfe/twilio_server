@@ -7,9 +7,9 @@ app.config.from_pyfile('app.cfg')
 api = Api(app)
 db = SQLAlchemy(app)
 
-from resources.endpoint import Endpoint
-from resources.messages import Messages
-from resources.gallery import Gallery
+from twiml_server.resources.endpoint import Endpoint
+from twiml_server.resources.messages import Messages
+from twiml_server.resources.gallery import Gallery
 
 api.add_resource(Endpoint, '/twilioendpoint')
 api.add_resource(Messages, '/messages/<account_sid>/<phone_number>')

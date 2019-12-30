@@ -13,5 +13,5 @@ def make_json_app():
                                 else 500)
         return response
 
-    for code in default_exceptions.iterkeys():
-        app.error_handler_spec[None][code] = make_json_error
+    for code in default_exceptions:
+        app.register_error_handler(code, make_json_error)

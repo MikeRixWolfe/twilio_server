@@ -1,0 +1,13 @@
+[Unit]
+Description=uWSGI instance to serve Twilio Server
+After=network.target
+
+[Service]
+User=mike
+Group=www-data
+WorkingDirectory=/home/mike/repos/twilio_server
+Environment="PATH=/usr/local/bin"
+ExecStart=/usr/local/bin/uwsgi --ini wsgi.ini
+
+[Install]
+WantedBy=multi-user.target
