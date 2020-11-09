@@ -21,6 +21,8 @@ Browse/cUrl/whatever `http://yoursite.tld/messages/<account_sid>/<phone_number>`
 ## Requirements
 * Python 2.7.x
 * SQLite
+* Boto3
+* Requests
 * Flask
 * Flask-Restful
 * Flask-SQLAlchemy

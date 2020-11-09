@@ -1,7 +1,8 @@
 from flask import Response, request
 from flask_restful import Resource
-from twiml_server import app, db
-from twiml_server.persist.models import Message
+from app import app, db
+from app.common.util import s3_upload
+from app.persist.models import Message
 
 
 class Endpoint(Resource):
@@ -15,6 +16,9 @@ class Endpoint(Resource):
         media_url = request.values.get('MediaUrl0', None)
 
         if account_sid in app.config['TWILIO_ACCOUNT_SIDS_CSV'].split(','):
+            if media_url:
+                s3_upload(media_url)
+
             message = Message(message_sid, account_sid, api_version,
                               body, from_, to, media_url)
             db.session.add(message)

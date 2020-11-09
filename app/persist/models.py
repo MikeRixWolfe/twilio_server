@@ -1,5 +1,5 @@
 from datetime import datetime
-from twiml_server import db
+from app import db
 
 
 class SerializableModel(object):
