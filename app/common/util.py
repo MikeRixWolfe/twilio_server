@@ -22,7 +22,7 @@ def make_json_app():
 
 def s3_upload(media_url):
     _session = Session()
-    client = _session.client('s3', region_name=app.config['S3_REGION_NAME'], endpoint_url=app.config['SE_ENDPOINT_URL'],
+    client = _session.client('s3', region_name=app.config['S3_REGION_NAME'], endpoint_url=app.config['S3_ENDPOINT_URL'],
         aws_access_key_id=app.config['S3_ACCESS_ID'], aws_secret_access_key=app.config['S3_SECRET_KEY'])
 
     r = requests.get(media_url)
