@@ -10,7 +10,7 @@ class Messages(Resource):
             .filter_by(AccountSid=account_sid) \
             .filter_by(To=phone_number) \
             .order_by(Message.DateReceived.desc()) \
-            .limit(request.args.get('limit', 50))]
+            .limit(request.args.get('limit', 25))]
 
         return Response(json.dumps(messages),
                         status=200,
